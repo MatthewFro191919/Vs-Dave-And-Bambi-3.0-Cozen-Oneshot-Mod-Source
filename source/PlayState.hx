@@ -583,7 +583,6 @@ class PlayState extends MusicBeatState
 			FlxG.sound.music.stop();
 		eyesoreson = FlxG.save.data.eyesores;
 		botPlay = FlxG.save.data.botplay;
-		#end
 		modchartoption = !FlxG.save.data.modchart;
 
 		sicks = 0;
@@ -3517,7 +3516,6 @@ class PlayState extends MusicBeatState
 			DiscordClient.changePresence("Chart Editor", null, null, true);
 			#end
 		}
-		#end
 
 		// FlxG.watch.addQuick('VOL', vocals.amplitudeLeft);
 		// FlxG.watch.addQuick('VOLRight', vocals.amplitudeRight);
@@ -3639,8 +3637,7 @@ class PlayState extends MusicBeatState
 		}
 		/*if (FlxG.keys.justPressed.THREE)
 			FlxG.switchState(new AnimationDebug(gf.curCharacter));*/
-		#end
-	
+
 		if (startingSong)
 		{
 			if (startedCountdown)
@@ -4057,7 +4054,6 @@ class PlayState extends MusicBeatState
 
 		if (FlxG.keys.justPressed.ONE)
 			endSong();
-		#end
 
 		if (updatevels)
 		{
