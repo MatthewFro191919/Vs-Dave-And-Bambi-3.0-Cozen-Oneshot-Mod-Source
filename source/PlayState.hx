@@ -1433,6 +1433,7 @@ class PlayState extends MusicBeatState
 					baldi = new BGSprite('baldi', -371, -2, Paths.image('backgrounds/void/redPortal', 'shared'), null, 0.65, 0.65);
 					baldi.setGraphicSize(Std.int(baldi.width * 0.5));
 					baldi.updateHitbox();
+					FlxTween.tween(baldi, 1, { alpha: 0 }); // fade out
 					sprites.insert(members.indexOf(bg), baldi);
 					insert(members.indexOf(bg2), baldi);
 				}
