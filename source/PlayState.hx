@@ -582,7 +582,6 @@ class PlayState extends MusicBeatState
 		if (FlxG.sound.music != null)
 			FlxG.sound.music.stop();
 		eyesoreson = FlxG.save.data.eyesores;
-		#if debug
 		botPlay = FlxG.save.data.botplay;
 		#end
 		modchartoption = !FlxG.save.data.modchart;
@@ -3503,7 +3502,6 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		#if debug
 		if (FlxG.keys.justPressed.THREE)
 		{
 			if(FlxTransitionableState.skipNextTransIn)
@@ -3579,7 +3577,6 @@ class PlayState extends MusicBeatState
 		else
 			FlxTween.tween(badLoseVin, {alpha: 0}, 1, {ease: FlxEase.linear});
 
-		#if debug
 		if (FlxG.keys.justPressed.FOUR)
 		{
 			trace('DUMP LOL:\nDAD POSITION: ${dad.getPosition()}\nBOYFRIEND POSITION: ${boyfriend.getPosition()}\nGF POSITION: ${gf.getPosition()}\nCAMERA POSITION: ${camFollow.getPosition()}');
@@ -4058,7 +4055,6 @@ class PlayState extends MusicBeatState
 		if (!inCutscene && !botPlay)
 			keyShit();
 
-		#if debug
 		if (FlxG.keys.justPressed.ONE)
 			endSong();
 		#end
