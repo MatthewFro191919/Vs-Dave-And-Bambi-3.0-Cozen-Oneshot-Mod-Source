@@ -118,9 +118,7 @@ class OptionsMenu extends MusicBeatState
 			+ "\n" + (FlxG.save.data.barColors ? LanguageManager.getTextString('option_barColors_on') : LanguageManager.getTextString('option_barColors_off'))
 			+ "\n" + (FlxG.save.data.freeplayMusic ? LanguageManager.getTextString('option_freeplayMusic_on') : LanguageManager.getTextString('option_freeplayMusic_off'))
 			+ "\n" + (FlxG.save.data.longAssBar ? 'Long Health Bar ON' : 'Long Health Bar OFF')
-			#if debug
 			+ "\n" + (FlxG.save.data.botplay ? 'Bot Play ON' : 'Bot Play OFF')
-			#end
 			);
 
 		grpControls = new FlxTypedGroup<Alphabet>();
@@ -267,11 +265,9 @@ class OptionsMenu extends MusicBeatState
 				case 23:
 					FlxG.save.data.longAssBar = !FlxG.save.data.longAssBar;
 					updateGroupControls(FlxG.save.data.longAssBar ? 'Long Health Bar ON' : 'Long Health Bar OFF', 23, 'Vertical');
-				#if debug
 				case 24:
 					if (!awaitingExploitation) FlxG.save.data.botplay = !FlxG.save.data.botplay;
 					updateGroupControls(FlxG.save.data.botplay ? 'Bot Play ON' : 'Bot Play OFF', 24, 'Vertical');
-				#end
 			}
 		}
 	}
